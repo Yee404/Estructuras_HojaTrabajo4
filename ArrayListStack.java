@@ -13,10 +13,12 @@ public class ArrayListStack implements StackInterface {
     }
 
     public String pop() {
+
         return Stack.remove(Stack.size() - 1);
     }
 
     public String peek() {
+
         return Stack.get(Stack.size() - 1);
     }
 
