@@ -1,7 +1,15 @@
 import java.io.*;
 import java.util.Scanner;
 
+/**
+ * Clase que realiza la conversión de expresiones postfix a infix
+ * y presenta un menú para elegir la implementación de una pila.
+ */
 public class PostfixToInfix {
+    /**
+     * Método principal que inicia la aplicación.
+     * @param args Argumentos de la línea de comandos (no se utilizan).
+     */
     public static void main(String[] args) {
         try {
             BufferedReader Reader = new BufferedReader(new FileReader("datos.txt"));

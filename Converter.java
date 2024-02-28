@@ -1,13 +1,31 @@
 import java.util.*;
 
+/**
+ * Clase que realiza la conversión de expresiones postfix a infix.
+ */
 public class Converter {
 
+    /**
+     * Interfaz que define las operaciones de una pila.
+     */
     public StackInterface Stack;
 
+    /**
+     * Constructor de la clase Converter.
+     * 
+     * @param Stack Objeto que implementa la interfaz StackInterface para
+     *              representar la pila.
+     */
     public Converter(StackInterface Stack) {
         this.Stack = Stack;
     }
 
+    /**
+     * Convierte una expresión postfix a infix.
+     * 
+     * @param expr Expresión en formato postfix.
+     * @return Expresión convertida a formato infix.
+     */
     public String PostfixToInfix(String expr) {
         StringBuilder postfix = new StringBuilder();
 
@@ -42,6 +60,12 @@ public class Converter {
         return postfix.toString().trim();
     }
 
+    /**
+     * Determina la precedencia de un operador.
+     * 
+     * @param operator Operador a evaluar.
+     * @return Valor numérico que representa la precedencia del operador.
+     */
     private int precedence(char operator) {
         switch (operator) {
             case '+':
